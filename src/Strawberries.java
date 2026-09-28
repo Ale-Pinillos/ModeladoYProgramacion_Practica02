@@ -2,8 +2,8 @@ public class Strawberries extends Topping{
 
     public Strawberries(IceCream iceCream){
         this.iceCream = iceCream;
-        this.description = ", strawberries";
-        this.name = "strawberries";
+        this.description = ", fresitas";
+        this.name = "fresitas";
         this.cost = 15;
     }
 }

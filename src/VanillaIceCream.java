@@ -1,8 +1,8 @@
 public class VanillaIceCream extends IceCream{
 
     public VanillaIceCream(){
-        description = "Vanilla-flavored ice cream";
-        name = "Vanilla ice cream";
+        description = "Helado sabor vainilla";
+        name = "Helado de vainilla";
         cost = 30;
     }
 }

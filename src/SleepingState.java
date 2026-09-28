@@ -8,47 +8,47 @@ public class SleepingState implements State{
     
     public String call(){
         robot.setState(robot.servingClient());
-        return "The robot appears in front of you, you may order now";
+        return "El robot aparece frente a ti, ya puedes ordenar";
     }
 
     public String cancelOrder(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String orderIceCream(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String orderPizza(Pizza pizzaType){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String confirmOrder(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String requestPreparation(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String chooseDough(String dough){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String chooseFlavor(IceCream flavor){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String addTopping(ToppingType topping){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String requestDelivery(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
 
     public String finishPreparation(){
-        return "Invalid operation, robot is sleeping";
+        return "Operacion invalida, el robot esta durmiendo";
     }
     
 }

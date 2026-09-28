@@ -238,7 +238,7 @@ public class Robot{
         // TODO
         String s = "=================================================================="
             +  "                         TICKET DE ORDEN                          "
-            +  "/n/n/n"
+            +  "\n\n\n"
             +  "Productos:\n\n";
 
         if(pizza != null){
@@ -246,10 +246,10 @@ public class Robot{
         }
 
         if(iceCream != null){
-            s += "[] " + iceCream.getName() + "     Descripcion del helado: " + iceCream.getDescription() + "       Precio del helado: " + iceCream.getCost() + "/n/n";
+            s += "[] " + iceCream.getName() + "     Descripcion del helado: " + iceCream.getDescription() + "       Precio del helado: " + iceCream.getCost() + "\n\n";
         }
 
-        s += "Precio total: " + (pizza.getCost() + iceCream.getCost()) + "/n/n"
+        s += "Precio total: " + (pizza.getCost() + iceCream.getCost()) + "\n\n"
             + "==================================================================";
 
 

@@ -1,8 +1,8 @@
 public class StrawberryIceCream extends IceCream{
 
     public StrawberryIceCream(){
-        description = "Strawberry-flavored ice cream";
-        name = "Strawberry ice cream";
+        description = "Helado sabor fresa";
+        name = "Helado de fresa";
         cost = 40;
     }
 }

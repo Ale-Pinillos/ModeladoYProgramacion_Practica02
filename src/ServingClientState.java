@@ -7,55 +7,55 @@ public class ServingClientState implements State{
     }
     
     public String call(){
-        return "Invalid operation, the robot is already in front of you";
+        return "Operacion invalida, el robot ya esta frente a ti";
     }
 
     public String cancelOrder(){
         robot.setState(robot.sleeping());
         robot.reset();
-        return "The robot goes back to sleep";
+        return "El robot regresa a dormir";
     }
 
     public String orderIceCream(){
         robot.addIceCream();
         robot.setState(robot.waitingForConfirmation());
 
-        return "Ice cream added to order, you may now add a pizza or confirm your order";
+        return "Helado agregado a la orden, puedes pedir una pizza o confirmar tu orden";
     }
 
     public String orderPizza(Pizza pizzaType){
         robot.addPizza(pizzaType);
         robot.setState(robot.waitingForConfirmation());
 
-        return "Pizza added to order, you may now add an ice cream or confirm your order";
+        return "Pizza agregada a la orden, puedes pedir un helado o confirmar tu orden";
     }
 
     public String confirmOrder(){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String requestPreparation(){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String chooseDough(String dough){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String chooseFlavor(IceCream flavor){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String addTopping(ToppingType topping){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String requestDelivery(){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
 
     public String finishPreparation(){
-        return "Invalid operation, you haven't ordered anything yet";
+        return "Operacion invalida, no has ordenado nada aun";
     }
     
 }
