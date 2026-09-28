@@ -1,8 +1,19 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Representa a la Pizzeria "El pequeno Cesarin". Se encarga de la logica de la interfaz
+ * interactiva en consola. Es el puente entre las clases de todos los patrones.
+ */
 public class Pizzeria {
 
+    /**
+     * Metodo encargado de leer y verificar la entrada del usuario en consola.
+     * Se utiliza en la interfaz interactiva. Si es valido, devuelve la opcion ingresada 
+     * para que el switch lo use. Si es invalida, imprime un mensaje de error.
+     * @param sc el input de consola
+     * @return la opcion ingresada por el usuario validada
+     */
     private static int readOption(Scanner sc){
         try {
             return sc.nextInt();
@@ -13,6 +24,15 @@ public class Pizzeria {
         }
     }
 
+    /**
+     * Sub-menu que permite elegir una de los 6 diferentes tipos de pizzas disponibles.
+     * Crea los objetos pizzas de acuerdo a la opcion elegida y se las pasa a robot a
+     * través de su metodo orderPizza. Si se cancela la orden, se regresa al menu 
+     * principal.Despues de cada accion, se deja de desplegar este menu y se regresa al 
+     * menu cuya opcion lo llamo.
+     * @param sc el input de consola
+     * @param robot el robot encargado de manejar cada accion delegada por el usuario
+     */
     private static void menuPizzaOptions(Scanner sc, Robot robot) {
         boolean keepRunningPO = true;
         while (keepRunningPO) {
@@ -63,6 +83,15 @@ public class Pizzeria {
         }
     }
 
+    /**
+     * Sub-menu que muestra las opciones de sabores de helado disponibles.
+     * Crea los objetos helado y se los pasa al robot a través de su metodo
+     * orderIceCream. Si se cancela la orden, se regresa al menu principal.
+     * Despues de cada accion, se deja de desplegar este menu y se regresa 
+     * al menu cuya opcion lo llamo.
+     * @param sc
+     * @param robot
+     */
     private static void menuIceCreamOptions(Scanner sc, Robot robot) {
         boolean keepRunningIC = true;
         while (keepRunningIC) {
@@ -101,6 +130,14 @@ public class Pizzeria {
         }
     }
 
+    /**
+     * Sub-menu que muestra los tipos de masa disponibles. Pasa los nombres de los
+     * tipos de masa al robot para que este los asigne a la pizza. Muestra un mensaje
+     * de opcion invalida si el cliente trata de cancelar la orden. Despues de cada 
+     * accion, se deja de desplegar este menu y se regresa al menu cuya opcion lo llamo.
+     * @param sc
+     * @param robot
+     */
     private static void menuDoughOptions(Scanner sc, Robot robot) {
         boolean keepRunningDO = true;
         while (keepRunningDO) {
@@ -138,6 +175,14 @@ public class Pizzeria {
         }
     }
     
+    /**
+     * Sub-menu que muestra todas las opciones de toppings disponibles para helado. 
+     * Pasa los nombres de los toppings al robot a través de su metodo addTopping.
+     * Despues de cada accion, se deja de desplegar este menu y se regresa al menu 
+     * cuya opcion lo llamo.
+     * @param sc
+     * @param robot
+     */
     private static void menuToppingsOptions(Scanner sc, Robot robot) {
         boolean keepRunningTO = true;
         while (keepRunningTO) {
@@ -197,6 +242,11 @@ public class Pizzeria {
         }
     }
 
+    /**
+     * Metodo principal de la clase. Despliega el menu interactivo en la consola y
+     * coordina las respuestas de acuerdo a las opciones elegidas por el cliente.
+     * Se muestran todas las acciones que el cliente puede realizar.
+     */
     public static void openPizzeria(){
         Robot lirolCisa = new Robot();
         Scanner sc = new Scanner(System.in);
