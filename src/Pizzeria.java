@@ -106,17 +106,14 @@ public class Pizzeria {
                 case 1:
                     System.out.println(robot.chooseFlavor(new VanillaIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
                     System.out.println(robot.chooseFlavor(new StrawberryIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
                     System.out.println(robot.chooseFlavor(new ChocolateIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 0:
                     System.out.println(robot.cancelOrder());
@@ -274,7 +271,6 @@ public class Pizzeria {
                     System.out.println(lirolCisa.cancelOrder());
                     break;
                 case 3:
-                    System.out.println(lirolCisa.orderPizza(null));
                     Pizzeria.menuPizzaOptions(sc, lirolCisa);
                     break;
                 case 4:
@@ -284,14 +280,13 @@ public class Pizzeria {
                     System.out.println(lirolCisa.confirmOrder());
                     break;
                 case 6:
-                    System.out.println(lirolCisa.chooseDough(null));
+                    Pizzeria.menuDoughOptions(sc, lirolCisa);
                     break;
                 case 7:
-                    System.out.println(lirolCisa.chooseFlavor(null));
                     Pizzeria.menuIceCreamOptions(sc, lirolCisa);
                     break;
                 case 8:
-                    System.out.println(lirolCisa.addTopping(null));
+                    Pizzeria.menuToppingsOptions(sc, lirolCisa);
                     break;
                 case 9:
                     System.out.println(lirolCisa.requestPreparation());
