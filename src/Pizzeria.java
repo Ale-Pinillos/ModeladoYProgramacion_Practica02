@@ -1,0 +1,270 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Pizzeria {
+
+    private static int readOption(Scanner sc){
+        try {
+            return sc.nextInt();
+        } catch (InputMismatchException ime) {
+            System.out.println("Solo se aceptan numeros. Por favor, seleccione una de las opciones disponibles.");
+            sc.nextLine();
+            return 0;
+        }
+    }
+
+    private static void menuPizzaOptions(Scanner sc, Robot robot) {
+        boolean keepRunningPO = true;
+        while (keepRunningPO) {
+            System.out.println("Lirol Cisa: Seleccione uno de nuestros 6 sabores de pizza, por favor");
+            System.out.println("1. Pizza de Queso Parmesano y Jamon");
+            System.out.println("2. Pizza de Pollo y Queso Parmesano");
+            System.out.println("3. Pizza de Pepperoni y Queso de Cabra");
+            System.out.println("4. Pizza Clasica de Pepperoni");
+            System.out.println("5. Pizza de Queso Parmesano y Queso de Cabra");
+            System.out.println("6. Pizza de Tres Quesos");
+            System.out.println("0. Cancelar orden");
+
+            int option = readOption(sc);
+
+            switch (option) {
+                case 1:
+                    robot.orderPizza(new HamAndParmesanPizza());
+                    keepRunningPO = false;
+                    break;
+                case 2:
+                    robot.orderPizza(new ParmesanAndChickenPizza());
+                    keepRunningPO = false;
+                    break;
+                case 3:
+                    robot.orderPizza(new PepperoniAndGoatPizza());
+                    keepRunningPO = false;
+                    break;
+                case 4:
+                    robot.orderPizza(new PepperoniPizza());
+                    keepRunningPO = false;
+                    break;
+                case 5:
+                    robot.orderPizza(new PizzaGoatAndParmesan());
+                    keepRunningPO = false;
+                    break;
+                case 6:
+                    robot.orderPizza(new ThreeCheesesPizza());
+                    keepRunningPO = false;
+                    break;
+                case 0:
+                    robot.cancelOrder();
+                    System.out.println("Orden cancelada.");
+                    keepRunningPO = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida. Por favor, seleccione una de las opciones disponibles.");
+            }
+        }
+    }
+
+    private static void menuIceCreamOptions(Scanner sc, Robot robot) {
+        boolean keepRunningIC = true;
+        while (keepRunningIC) {
+            System.out.println("Lirol Cisa: Seleccione uno de nuestros 3 sabores de helado, por favor");
+            System.out.println("1. Helado de Vainilla");
+            System.out.println("2. Helado de Fresa");
+            System.out.println("3. Helado de Chocolate");
+            System.out.println("0. Cancelar orden");
+
+            int option = readOption(sc);
+
+            switch (option) {
+                case 1:
+                    robot.orderIceCream(new VanillaIceCream());
+                    keepRunningIC = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 2:
+                    robot.orderIceCream(new StrawberryIceCream());
+                    keepRunningIC = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 3:
+                    robot.orderIceCream(new ChocolateIceCream());
+                    keepRunningIC = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 0:
+                    robot.cancelOrder();
+                    System.out.println("Orden cancelada.");
+                    keepRunningIC = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida. Por favor, seleccione una de las opciones disponibles.");
+            }
+        }
+    }
+
+    private static void menuDoughOptions(Scanner sc, Robot robot) {
+        boolean keepRunningDO = true;
+        while (keepRunningDO) {
+            System.out.println("Lirol Cisa: Seleccione uno de nuestros 3 tipos de masa, por favor");
+            System.out.println("1. Napolitana");
+            System.out.println("2. Romana");
+            System.out.println("3. Americana");
+            System.out.println("0. Cancelar orden");
+
+            int option = readOption(sc);
+
+            switch (option) {
+                case 1:
+                    robot.orderIceCream("Napolitan");
+                    keepRunningDO = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 2:
+                    robot.orderIceCream("Roman");
+                    keepRunningDO = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 3:
+                    robot.orderIceCream("American");
+                    keepRunningDO = false;
+                    Pizzeria.menuToppingsOptions(sc, robot);
+                    break;
+                case 0:
+                    System.out.println(robot.cancelOrder());
+                    keepRunningDO = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida. Por favor, seleccione una de las opciones disponibles.");
+            }
+        }
+    }
+    
+    private static void menuToppingsOptions(Scanner sc, Robot robot) {
+        boolean keepRunningTO = true;
+        while (keepRunningTO) {
+            System.out.println("Lirol Cisa: Seleccione uno de nuestros 6 sabores de pizza, por favor");
+            System.out.println("1. Gomitas de Gusano");
+            System.out.println("2. Gomitas de Panda");
+            System.out.println("3. Gomitas de Aro");
+            System.out.println("4. Chispas de Chocolate");
+            System.out.println("5. Malvaviscos");
+            System.out.println("6. Fresitas");
+            System.out.println("7. Manguitos");
+            System.out.println("8. Kiwis");
+            System.out.println("0. Terminar Preparación");
+
+            int option = readOption(sc);
+
+            switch (option) {
+                case 1:
+                    robot.addTopping("GummyWorms");
+                    keepRunningTO = false;
+                    break;
+                case 2:
+                    robot.addTopping("GummyPandas");
+                    keepRunningTO = false;
+                    break;
+                case 3:
+                    robot.addTopping("GummyRings");
+                    keepRunningTO = false;
+                    break;
+                case 4:
+                    robot.addTopping("ChocolateChips");
+                    keepRunningTO = false;
+                    break;
+                case 5:
+                    robot.addTopping("Marshmallows");
+                    keepRunningTO = false;
+                    break;
+                case 6:
+                    robot.addTopping("Strawberries");
+                    keepRunningTO = false;
+                    break;
+                case 7:
+                    robot.addTopping("Mangos");
+                    keepRunningTO = false;
+                    break;
+                case 8:
+                    robot.addTopping("Kiwis");
+                    keepRunningTO = false;
+                    break;
+                case 0:
+                    robot.finishPreparation();
+                    keepRunningTO = false;
+                    break;
+                default:
+                    System.out.println("Opcion invalida. Por favor, seleccione una de las opciones disponibles.");
+            }
+        }
+    }
+
+    public static void openPizzeria(){
+        Robot lirolCisa = new Robot();
+        Scanner sc = new Scanner(System.in);
+        boolean keepRunning = true;
+
+        while(keepRunning){
+            System.out.println("========================================= BIENVENIDO A PIZZERIA 'El Pequeno Cesarin'=========================================");
+            System.out.println("Nos hace muy felices informarle que, a partir de ahora, contamos con un nuevo robot, Lirol Cisa.");
+            System.out.println("El se encargara de atender y realizar los pedidos. Llamalo para empezar a ser atendido.");
+            System.out.println("1. Llamar a nuestro robot");
+            System.out.println("2. Cancelar Orden");
+            System.out.println("3. Ordenar Pizza");
+            System.out.println("4. Ordenar Helado");
+            System.out.println("5. Confirmar Orden");
+            System.out.println("6. Elegir la masa");
+            System.out.println("7. Elegir el sabor de helado");
+            System.out.println("8. Agregar un topping");
+            System.out.println("9. Solicitar preparacion");
+            System.out.println("10. Solicitar entrega");
+            System.out.println("11. Terminar preparación");
+            System.out.println("0. salir");
+
+            int option = readOption(sc);
+
+            switch(option){
+                case 1:
+                    robot.call();
+                    break;
+                case 2:
+                    robot.cancelOrder();
+                    break;
+                case 3:
+                    robot.orderPizza();
+                    Pizzeria.menuPizzaOptions(sc, lirolCisa);
+                    break;
+                case 4:
+                    robot.orderIceCream();
+                    break;
+                case 5:
+                    robot.confirmOrder();
+                    break;
+                case 6:
+                    robot.chooseDough();
+
+                    break;
+                case 7:
+                    robot.chooseFlavor();
+                    Pizzeria.menuIceCreamOptions(sc, lirolCisa);
+                    break;
+                case 8:
+                    robot.addTopping();
+                    break;
+                case 9:
+                    robot.requestPreparation();
+                    break;
+                case 10:
+                    robot.requestDelivery();
+                    break;
+                case 11:
+                    robot.finishPreparation();
+                    break;
+                case 0:
+                    System.out.println("¡Gracias por su visita! Vuelva pronto.");
+                    keepRunning = false;
+                    break;
+                default:
+                    System.out.println("Opcion Invalida. Por favor, seleccione una de las opciones disponibles.");
+            }
+        }
+    }
+}
