@@ -12,6 +12,7 @@ public class WaitingForConfirmationState implements State{
 
     public String cancelOrder(){
         robot.setState(robot.sleeping());
+        robot.reset();
 
         return "El robot regresa a dormir";
     }

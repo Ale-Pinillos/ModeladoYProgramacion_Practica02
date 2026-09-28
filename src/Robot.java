@@ -236,9 +236,44 @@ public class Robot{
     
     public String generateTicket(){
         // TODO
-        return "=================================================================="
+        String s = "=================================================================="
             +  "                         TICKET DE ORDEN                          "
             +  "/n/n/n"
-            +  "";
+            +  "Productos:\n\n";
+
+        if(pizza != null){
+            s += "[] " + pizza.getName() + "   Precio: " + pizza.getCost() + "\n\n";
+        }
+
+        if(iceCream != null){
+            s += "[] " + iceCream.getName() + "     Descripcion del helado: " + iceCream.getDescription() + "       Precio del helado: " + iceCream.getCost() + "/n/n";
+        }
+
+        s += "Precio total: " + (pizza.getCost() + iceCream.getCost()) + "/n/n"
+            + "==================================================================";
+
+
+        this.reset();
+        
+        return s;
+    }
+
+    public void reset(){
+        pizza = null;
+        iceCream = null;
+
+        numberOfPizzas = 0;
+        numberOfIceCreams = 0;
+
+        counterWorms = 0;
+        counterPandas = 0;
+        counterRings = 0;
+        counterChocolate = 0;
+        counterMarshmallows = 0;
+        counterStrawberries = 0;
+        counterMangos = 0;
+        counterKiwis = 0;
+
+        doughChosen = false;
     }
 }

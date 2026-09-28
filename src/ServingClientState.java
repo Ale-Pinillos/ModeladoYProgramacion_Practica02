@@ -12,6 +12,7 @@ public class ServingClientState implements State{
 
     public String cancelOrder(){
         robot.setState(robot.sleeping());
+        robot.reset();
         return "The robot goes back to sleep";
     }
 
