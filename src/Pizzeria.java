@@ -65,7 +65,7 @@ public class Pizzeria {
                     keepRunningPO = false;
                     break;
                 case 5:
-                    System.out.println(robot.orderPizza(new PizzaGoatAndParmesan()));
+                    System.out.println(robot.orderPizza(new GoatAndParmesanPizza()));
                     keepRunningPO = false;
                     break;
                 case 6:
@@ -196,35 +196,35 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    System.out.println(robot.addTopping("GummyWorms"));
+                    System.out.println(robot.addTopping(ToppingType.WORMS));
                     keepRunningTO = false;
                     break;
                 case 2:
-                    System.out.println(robot.addTopping("GummyPandas"));
+                    System.out.println(robot.addTopping(ToppingType.PANDAS));
                     keepRunningTO = false;
                     break;
                 case 3:
-                    System.out.println(robot.addTopping("GummyRings"));
+                    System.out.println(robot.addTopping(ToppingType.RINGS));
                     keepRunningTO = false;
                     break;
                 case 4:
-                    System.out.println(robot.addTopping("ChocolateChips"));
+                    System.out.println(robot.addTopping(ToppingType.CHOCOLATE));
                     keepRunningTO = false;
                     break;
                 case 5:
-                    System.out.println(robot.addTopping("Marshmallows"));
+                    System.out.println(robot.addTopping(ToppingType.MARSHMALLOWS));
                     keepRunningTO = false;
                     break;
                 case 6:
-                    System.out.println(robot.addTopping("Strawberries"));
+                    System.out.println(robot.addTopping(ToppingType.STRAWBERRIES));
                     keepRunningTO = false;
                     break;
                 case 7:
-                    System.out.println(robot.addTopping("Mangos"));
+                    System.out.println(robot.addTopping(ToppingType.MANGOS));
                     keepRunningTO = false;
                     break;
                 case 8:
-                    System.out.println(robot.addTopping("Kiwis"));
+                    System.out.println(robot.addTopping(ToppingType.KIWIS));
                     keepRunningTO = false;
                     break;
                 case 0:
