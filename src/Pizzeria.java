@@ -244,10 +244,11 @@ public class Pizzeria {
         Scanner sc = new Scanner(System.in);
         boolean keepRunning = true;
 
+        System.out.println("========================================= BIENVENIDO A PIZZERIA 'El Pequeno Cesarin'=========================================");
+        System.out.println("Nos hace muy felices informarle que, a partir de ahora, contamos con un nuevo robot, Lirol Cisa.");
+        System.out.println("El se encargara de atender y realizar los pedidos. Llamalo para empezar a ser atendido.");
+        
         while(keepRunning){
-            System.out.println("========================================= BIENVENIDO A PIZZERIA 'El Pequeno Cesarin'=========================================");
-            System.out.println("Nos hace muy felices informarle que, a partir de ahora, contamos con un nuevo robot, Lirol Cisa.");
-            System.out.println("El se encargara de atender y realizar los pedidos. Llamalo para empezar a ser atendido.");
             System.out.println("1. Llamar a nuestro robot");
             System.out.println("2. Cancelar Orden");
             System.out.println("3. Ordenar Pizza");
