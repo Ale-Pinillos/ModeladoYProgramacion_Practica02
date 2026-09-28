@@ -106,17 +106,14 @@ public class Pizzeria {
                 case 1:
                     System.out.println(robot.chooseFlavor(new VanillaIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
                     System.out.println(robot.chooseFlavor(new StrawberryIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
                     System.out.println(robot.chooseFlavor(new ChocolateIceCream()));
                     keepRunningIC = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 0:
                     System.out.println(robot.cancelOrder());
@@ -242,15 +239,16 @@ public class Pizzeria {
      * coordina las respuestas de acuerdo a las opciones elegidas por el cliente.
      * Se muestran todas las acciones que el cliente puede realizar.
      */
-    public static void openPizzeria(){
+    public static void main(String[] args){
         Robot lirolCisa = new Robot();
         Scanner sc = new Scanner(System.in);
         boolean keepRunning = true;
 
+        System.out.println("========================================= BIENVENIDO A PIZZERIA 'El Pequeno Cesarin'=========================================");
+        System.out.println("Nos hace muy felices informarle que, a partir de ahora, contamos con un nuevo robot, Lirol Cisa.");
+        System.out.println("El se encargara de atender y realizar los pedidos. Llamalo para empezar a ser atendido.");
+        
         while(keepRunning){
-            System.out.println("========================================= BIENVENIDO A PIZZERIA 'El Pequeno Cesarin'=========================================");
-            System.out.println("Nos hace muy felices informarle que, a partir de ahora, contamos con un nuevo robot, Lirol Cisa.");
-            System.out.println("El se encargara de atender y realizar los pedidos. Llamalo para empezar a ser atendido.");
             System.out.println("1. Llamar a nuestro robot");
             System.out.println("2. Cancelar Orden");
             System.out.println("3. Ordenar Pizza");
@@ -274,7 +272,6 @@ public class Pizzeria {
                     System.out.println(lirolCisa.cancelOrder());
                     break;
                 case 3:
-                    System.out.println(lirolCisa.orderPizza(null));
                     Pizzeria.menuPizzaOptions(sc, lirolCisa);
                     break;
                 case 4:
@@ -284,14 +281,13 @@ public class Pizzeria {
                     System.out.println(lirolCisa.confirmOrder());
                     break;
                 case 6:
-                    System.out.println(lirolCisa.chooseDough(null));
+                    Pizzeria.menuDoughOptions(sc, lirolCisa);
                     break;
                 case 7:
-                    System.out.println(lirolCisa.chooseFlavor(null));
                     Pizzeria.menuIceCreamOptions(sc, lirolCisa);
                     break;
                 case 8:
-                    System.out.println(lirolCisa.addTopping(null));
+                    Pizzeria.menuToppingsOptions(sc, lirolCisa);
                     break;
                 case 9:
                     System.out.println(lirolCisa.requestPreparation());
