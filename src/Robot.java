@@ -28,12 +28,12 @@ public class Robot{
     private int counterKiwis = 0;
 
     public Robot(){
-        sleeping = new SleepingState();
-        serving = new ServingClientState();
-        waitingForConfirmation = new WaitingForConfirmation();
-        waitingForInstructions = new WaitingForInstructions();
-        preparingOrder = new PreparingOrderState();
-        waitingRequest = new WaitingRequestState();
+        sleeping = new SleepingState(this);
+        serving = new ServingClientState(this);
+        waitingForConfirmation = new WaitingForConfirmationState(this);
+        waitingForInstructions = new WaitingForInstructionsState(this);
+        preparingOrder = new PreparingOrderState(this);
+        waitingRequest = new WaitingRequestState(this);
 
         actualState = sleeping;
 
@@ -52,7 +52,7 @@ public class Robot{
     }
 
     public State servingClient(){
-        return servingClient;
+        return serving;
     }
 
     public State waitingForConfirmation(){
@@ -98,15 +98,15 @@ public class Robot{
     }
 
     public String chooseDough(String dough){
-        return actualState.chooseDough();
+        return actualState.chooseDough(dough);
     }
     
     public String chooseFlavor(IceCream flavor){
-        return actualState.chooseFlavor();
+        return actualState.chooseFlavor(flavor);
     }
 
     public String addTopping(ToppingType topping){
-        return actualState.addTopping();
+        return actualState.addTopping(topping);
     }
 
     public String requestDelivery(){
@@ -141,7 +141,7 @@ public class Robot{
     }
 
     public boolean hasIceCream(){
-        return numberOfIceCream > 0;
+        return numberOfIceCreams > 0;
     }
 
     public void setPizzaDough(String dough){
@@ -154,7 +154,7 @@ public class Robot{
         this.iceCream = iceCream;
     }
 
-    public void addTopping(ToppingType topping){
+    public void addNewTopping(ToppingType topping){
         switch(topping){
         case WORMS:
             counterWorms++;

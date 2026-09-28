@@ -55,49 +55,49 @@ public class PreparingOrderState implements State{
             if(robot.getWorms() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case PANDAS:
             if(robot.getPandas() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case RINGS:
             if(robot.getRings() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case CHOCOLATE:
             if(robot.getChocolate() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case MARSHMALLOWS:
             if(robot.getMarshmallows() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case STRAWBERRIES:
             if(robot.getStrawberries() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case MANGOS:
             if(robot.getMangos() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         case KIWIS:
             if(robot.getKiwis() == 3)
                 return "Solo se puede agregar hasta 3 veces cada ingrediente";
 
-            robot.addTopping(topping);
+            robot.addNewTopping(topping);
             break;
         }
 

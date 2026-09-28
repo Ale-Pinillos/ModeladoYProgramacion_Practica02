@@ -34,7 +34,7 @@ public class WaitingForInstructionsState implements State{
             
         if(robot.doughChosen()){
             robot.setState(robot.preparingOrder());
-            String s = "Instrucciones recibidas, preparacion de pizza terminada":
+            String s = "Instrucciones recibidas, preparacion de pizza terminada";
             
             if(robot.hasIceCream())
                 s += "/nEl robot espera instrucciones sobre el helado";

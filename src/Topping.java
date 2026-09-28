@@ -10,6 +10,6 @@ public class Topping extends IceCream{
     }
 
     public String getDescription(){
-        return iceCream.getDescription + this.description;
+        return iceCream.getDescription() + this.description;
     }
 }
