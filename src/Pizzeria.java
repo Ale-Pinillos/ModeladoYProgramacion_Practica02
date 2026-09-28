@@ -20,14 +20,14 @@ public class Pizzeria {
         } catch (InputMismatchException ime) {
             System.out.println("Solo se aceptan numeros. Por favor, seleccione una de las opciones disponibles.");
             sc.nextLine();
-            return 0;
+            return -1;
         }
     }
 
     /**
      * Sub-menu que permite elegir una de los 6 diferentes tipos de pizzas disponibles.
      * Crea los objetos pizzas de acuerdo a la opcion elegida y se las pasa a robot a
-     * través de su metodo orderPizza. Si se cancela la orden, se regresa al menu 
+     * traves de su metodo orderPizza. Si se cancela la orden, se regresa al menu 
      * principal.Despues de cada accion, se deja de desplegar este menu y se regresa al 
      * menu cuya opcion lo llamo.
      * @param sc el input de consola
@@ -84,7 +84,7 @@ public class Pizzeria {
 
     /**
      * Sub-menu que muestra las opciones de sabores de helado disponibles.
-     * Crea los objetos helado y se los pasa al robot a través de su metodo
+     * Crea los objetos helado y se los pasa al robot a traves de su metodo
      * orderIceCream. Si se cancela la orden, se regresa al menu principal.
      * Despues de cada accion, se deja de desplegar este menu y se regresa 
      * al menu cuya opcion lo llamo.
@@ -104,17 +104,17 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    System.out.println(robot.orderIceCream(new VanillaIceCream()));
+                    System.out.println(robot.chooseFlavor(new VanillaIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
-                    System.out.println(robot.orderIceCream(new StrawberryIceCream()));
+                    System.out.println(robot.chooseFlavor(new StrawberryIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
-                    System.out.println(robot.orderIceCream(new ChocolateIceCream()));
+                    System.out.println(robot.chooseFlavor(new ChocolateIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
@@ -149,22 +149,19 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    System.out.println(robot.orderIceCream("Napolitana"));
+                    System.out.println(robot.chooseDough("Napolitana"));
                     keepRunningDO = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
-                    System.out.println(robot.orderIceCream("Romana"));
+                    System.out.println(robot.chooseDough("Romana"));
                     keepRunningDO = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
-                    System.out.println(robot.orderIceCream("Americana"));
+                    System.out.println(robot.chooseDough("Americana"));
                     keepRunningDO = false;
-                    Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 0:
-                    System.out.println(System.out.println(robot.cancelOrder()));
+                    System.out.println(robot.cancelOrder());
                     keepRunningDO = false;
                     break;
                 default:
@@ -175,7 +172,7 @@ public class Pizzeria {
     
     /**
      * Sub-menu que muestra todas las opciones de toppings disponibles para helado. 
-     * Pasa los nombres de los toppings al robot a través de su metodo addTopping.
+     * Pasa los nombres de los toppings al robot a traves de su metodo addTopping.
      * Despues de cada accion, se deja de desplegar este menu y se regresa al menu 
      * cuya opcion lo llamo.
      * @param sc
@@ -184,7 +181,7 @@ public class Pizzeria {
     private static void menuToppingsOptions(Scanner sc, Robot robot) {
         boolean keepRunningTO = true;
         while (keepRunningTO) {
-            System.out.println("Lirol Cisa: Seleccione uno de nuestros 6 sabores de pizza, por favor");
+            System.out.println("Lirol Cisa: Seleccione uno de nuestros 8 toppings disponibles, por favor");
             System.out.println("1. Gomitas de Gusano");
             System.out.println("2. Gomitas de Panda");
             System.out.println("3. Gomitas de Aro");
@@ -193,7 +190,7 @@ public class Pizzeria {
             System.out.println("6. Fresitas");
             System.out.println("7. Manguitos");
             System.out.println("8. Kiwis");
-            System.out.println("0. Terminar Preparación");
+            System.out.println("0. Terminar Preparacion");
 
             int option = readOption(sc);
 
@@ -264,49 +261,49 @@ public class Pizzeria {
             System.out.println("8. Agregar un topping");
             System.out.println("9. Solicitar preparacion");
             System.out.println("10. Solicitar entrega");
-            System.out.println("11. Terminar preparación");
+            System.out.println("11. Terminar preparacion");
             System.out.println("0. salir");
 
             int option = readOption(sc);
 
             switch(option){
                 case 1:
-                    System.out.println(robot.call());
+                    System.out.println(lirolCisa.call());
                     break;
                 case 2:
-                    System.out.println(robot.cancelOrder());
+                    System.out.println(lirolCisa.cancelOrder());
                     break;
                 case 3:
-                    System.out.println(robot.orderPizza());
+                    System.out.println(lirolCisa.orderPizza(null));
                     Pizzeria.menuPizzaOptions(sc, lirolCisa);
                     break;
                 case 4:
-                    System.out.println(robot.orderIceCream());
+                    System.out.println(lirolCisa.orderIceCream());
                     break;
                 case 5:
-                    System.out.println(robot.confirmOrder());
+                    System.out.println(lirolCisa.confirmOrder());
                     break;
                 case 6:
-                    System.out.println(robot.chooseDough());
+                    System.out.println(lirolCisa.chooseDough(null));
                     break;
                 case 7:
-                    System.out.println(robot.chooseFlavor());
+                    System.out.println(lirolCisa.chooseFlavor(null));
                     Pizzeria.menuIceCreamOptions(sc, lirolCisa);
                     break;
                 case 8:
-                    System.out.println(robot.addTopping());
+                    System.out.println(lirolCisa.addTopping(null));
                     break;
                 case 9:
-                    System.out.println(robot.requestPreparation());
+                    System.out.println(lirolCisa.requestPreparation());
                     break;
                 case 10:
-                    System.out.println(robot.requestDelivery());
+                    System.out.println(lirolCisa.requestDelivery());
                     break;
                 case 11:
-                    System.out.println(robot.finishPreparation());
+                    System.out.println(lirolCisa.finishPreparation());
                     break;
                 case 0:
-                    System.out.println("¡Gracias por su visita! Vuelva pronto.");
+                    System.out.println("Gracias por su visita, Vuelva pronto.");
                     keepRunning = false;
                     break;
                 default:
