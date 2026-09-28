@@ -31,11 +31,11 @@ public abstract class Pizza implements Product {
 
     /**
      * Construye una pizza con sus datos base. El tipo de masa no se
-     * recibe aqui porque el cliente lo elige después con chooseDough.
+     * recibe aqui porque el cliente lo elige despues con chooseDough.
      *
      * @param name         nombre de la pizza.
      * @param cost         precio fijo de la pizza.
-     * @param vegetariana  si la pizza es vegetariana.
+     * @param vegetarian  si la pizza es vegetariana.
      * @param cheeses      lista de quesos de la pizza.
      * @param proteins     lista de proteinas de la pizza (vacia si es vegetariana).
      */
