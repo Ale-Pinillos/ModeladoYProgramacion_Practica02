@@ -49,32 +49,31 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    robot.orderPizza(new HamAndParmesanPizza());
+                    System.out.println(robot.orderPizza(new HamAndParmesanPizza()));
                     keepRunningPO = false;
                     break;
                 case 2:
-                    robot.orderPizza(new ParmesanAndChickenPizza());
+                    System.out.println(robot.orderPizza(new ParmesanAndChickenPizza()));
                     keepRunningPO = false;
                     break;
                 case 3:
-                    robot.orderPizza(new PepperoniAndGoatPizza());
+                    System.out.println(robot.orderPizza(new PepperoniAndGoatPizza()));
                     keepRunningPO = false;
                     break;
                 case 4:
-                    robot.orderPizza(new PepperoniPizza());
+                    System.out.println(robot.orderPizza(new PepperoniPizza()));
                     keepRunningPO = false;
                     break;
                 case 5:
-                    robot.orderPizza(new PizzaGoatAndParmesan());
+                    System.out.println(robot.orderPizza(new PizzaGoatAndParmesan()));
                     keepRunningPO = false;
                     break;
                 case 6:
-                    robot.orderPizza(new ThreeCheesesPizza());
+                    System.out.println(robot.orderPizza(new ThreeCheesesPizza()));
                     keepRunningPO = false;
                     break;
                 case 0:
-                    robot.cancelOrder();
-                    System.out.println("Orden cancelada.");
+                    System.out.println(robot.cancelOrder());
                     keepRunningPO = false;
                     break;
                 default:
@@ -105,23 +104,22 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    robot.orderIceCream(new VanillaIceCream());
+                    System.out.println(robot.orderIceCream(new VanillaIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
-                    robot.orderIceCream(new StrawberryIceCream());
+                    System.out.println(robot.orderIceCream(new StrawberryIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
-                    robot.orderIceCream(new ChocolateIceCream());
+                    System.out.println(robot.orderIceCream(new ChocolateIceCream()));
                     keepRunningIC = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 0:
-                    robot.cancelOrder();
-                    System.out.println("Orden cancelada.");
+                    System.out.println(robot.cancelOrder());
                     keepRunningIC = false;
                     break;
                 default:
@@ -151,22 +149,22 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    robot.orderIceCream("Napolitan");
+                    System.out.println(robot.orderIceCream("Napolitan"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
-                    robot.orderIceCream("Roman");
+                    System.out.println(robot.orderIceCream("Roman"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
-                    robot.orderIceCream("American");
+                    System.out.println(robot.orderIceCream("American"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 0:
-                    System.out.println(robot.cancelOrder());
+                    System.out.println(System.out.println(robot.cancelOrder()));
                     keepRunningDO = false;
                     break;
                 default:
@@ -201,39 +199,39 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    robot.addTopping("GummyWorms");
+                    System.out.println(robot.addTopping("GummyWorms"));
                     keepRunningTO = false;
                     break;
                 case 2:
-                    robot.addTopping("GummyPandas");
+                    System.out.println(robot.addTopping("GummyPandas"));
                     keepRunningTO = false;
                     break;
                 case 3:
-                    robot.addTopping("GummyRings");
+                    System.out.println(robot.addTopping("GummyRings"));
                     keepRunningTO = false;
                     break;
                 case 4:
-                    robot.addTopping("ChocolateChips");
+                    System.out.println(robot.addTopping("ChocolateChips"));
                     keepRunningTO = false;
                     break;
                 case 5:
-                    robot.addTopping("Marshmallows");
+                    System.out.println(robot.addTopping("Marshmallows"));
                     keepRunningTO = false;
                     break;
                 case 6:
-                    robot.addTopping("Strawberries");
+                    System.out.println(robot.addTopping("Strawberries"));
                     keepRunningTO = false;
                     break;
                 case 7:
-                    robot.addTopping("Mangos");
+                    System.out.println(robot.addTopping("Mangos"));
                     keepRunningTO = false;
                     break;
                 case 8:
-                    robot.addTopping("Kiwis");
+                    System.out.println(robot.addTopping("Kiwis"));
                     keepRunningTO = false;
                     break;
                 case 0:
-                    robot.finishPreparation();
+                    System.out.println(robot.finishPreparation());
                     keepRunningTO = false;
                     break;
                 default:
@@ -273,40 +271,39 @@ public class Pizzeria {
 
             switch(option){
                 case 1:
-                    robot.call();
+                    System.out.println(robot.call());
                     break;
                 case 2:
-                    robot.cancelOrder();
+                    System.out.println(robot.cancelOrder());
                     break;
                 case 3:
-                    robot.orderPizza();
+                    System.out.println(robot.orderPizza());
                     Pizzeria.menuPizzaOptions(sc, lirolCisa);
                     break;
                 case 4:
-                    robot.orderIceCream();
+                    System.out.println(robot.orderIceCream());
                     break;
                 case 5:
-                    robot.confirmOrder();
+                    System.out.println(robot.confirmOrder());
                     break;
                 case 6:
-                    robot.chooseDough();
-
+                    System.out.println(robot.chooseDough());
                     break;
                 case 7:
-                    robot.chooseFlavor();
+                    System.out.println(robot.chooseFlavor());
                     Pizzeria.menuIceCreamOptions(sc, lirolCisa);
                     break;
                 case 8:
-                    robot.addTopping();
+                    System.out.println(robot.addTopping());
                     break;
                 case 9:
-                    robot.requestPreparation();
+                    System.out.println(robot.requestPreparation());
                     break;
                 case 10:
-                    robot.requestDelivery();
+                    System.out.println(robot.requestDelivery());
                     break;
                 case 11:
-                    robot.finishPreparation();
+                    System.out.println(robot.finishPreparation());
                     break;
                 case 0:
                     System.out.println("¡Gracias por su visita! Vuelva pronto.");
