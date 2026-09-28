@@ -65,7 +65,7 @@ public class Pizzeria {
                     keepRunningPO = false;
                     break;
                 case 5:
-                    System.out.println(robot.orderPizza(new PizzaGoatAndParmesan()));
+                    System.out.println(robot.orderPizza(new GoatAndParmesanPizza()));
                     keepRunningPO = false;
                     break;
                 case 6:
