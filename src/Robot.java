@@ -236,5 +236,9 @@ public class Robot{
     
     public String generateTicket(){
         // TODO
+        return "=================================================================="
+            +  "                         TICKET DE ORDEN                          "
+            +  "/n/n/n"
+            +  "";
     }
 }
