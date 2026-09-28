@@ -149,17 +149,17 @@ public class Pizzeria {
 
             switch (option) {
                 case 1:
-                    System.out.println(robot.orderIceCream("Napolitan"));
+                    System.out.println(robot.orderIceCream("Napolitana"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 2:
-                    System.out.println(robot.orderIceCream("Roman"));
+                    System.out.println(robot.orderIceCream("Romana"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
                 case 3:
-                    System.out.println(robot.orderIceCream("American"));
+                    System.out.println(robot.orderIceCream("Americana"));
                     keepRunningDO = false;
                     Pizzeria.menuToppingsOptions(sc, robot);
                     break;
