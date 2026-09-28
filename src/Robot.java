@@ -132,8 +132,104 @@ public class Robot{
         return doughChosen;
     }
 
+    public boolean flavorChosen(){
+        return iceCream != null;
+    }
+
     public boolean hasPizza(){
         return numberOfPizzas > 0;
+    }
+
+    public boolean hasIceCream(){
+        return numberOfIceCream > 0;
+    }
+
+    public void setPizzaDough(String dough){
+        doughChosen = true;
+
+        pizza.setDoughType(dough);
+    }
+
+    public void setIceCream(IceCream iceCream){
+        this.iceCream = iceCream;
+    }
+
+    public void addTopping(ToppingType topping){
+        switch(topping){
+        case WORMS:
+            counterWorms++;
+
+            iceCream = new GummyWorms(iceCream);
+            break;
+        case PANDAS:
+            counterPandas++;
+
+            iceCream = new GummyPandas(iceCream);
+            break;
+        case RINGS:
+            counterRings++;
+
+            iceCream = new GummyRings(iceCream);
+            break;
+        case CHOCOLATE:
+            counterChocolate++;
+
+            iceCream = new ChocolateChips(iceCream);
+            break;
+        case MARSHMALLOWS:
+            counterMarshmallows++;
+
+            iceCream = new Marshmallows(iceCream);
+            break;
+        case STRAWBERRIES:
+            counterStrawberries++;
+
+            iceCream = new Strawberries(iceCream);
+            break;
+        case MANGOS:
+            counterMangos++;
+
+            iceCream = new Mangos(iceCream);
+            break;
+        case KIWIS:
+            counterKiwis++;
+            
+            iceCream = new Kiwis(iceCream);
+            break;
+        }
+    }
+
+    // COUNTER GETTERS
+    public int getWorms(){
+        return counterWorms;
+    }
+
+    public int getPandas(){
+        return counterPandas;
+    }
+
+    public int getRings(){
+        return counterRings;
+    }
+
+    public int getChocolate(){
+        return counterChocolate;
+    }
+
+    public int getMarshmallows(){
+        return counterMarshmallows;
+    }
+
+    public int getStrawberries(){
+        return counterStrawberries;
+    }
+
+    public int getMangos(){
+        return counterMangos;
+    }
+
+    public int getKiwis(){
+        return counterKiwis;
     }
 
     // TICKET
