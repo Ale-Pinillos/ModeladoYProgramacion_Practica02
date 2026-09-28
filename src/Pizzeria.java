@@ -242,7 +242,7 @@ public class Pizzeria {
      * coordina las respuestas de acuerdo a las opciones elegidas por el cliente.
      * Se muestran todas las acciones que el cliente puede realizar.
      */
-    public static void openPizzeria(){
+    public static void main(String[] args){
         Robot lirolCisa = new Robot();
         Scanner sc = new Scanner(System.in);
         boolean keepRunning = true;
